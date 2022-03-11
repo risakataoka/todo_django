@@ -1,0 +1,36 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: osx-64
+asgiref=3.4.1=pyhd3eb1b0_0
+beautifulsoup4=4.10.0=pyha770c72_0
+bzip2=1.0.8=h1de35cc_0
+ca-certificates=2021.10.8=h033912b_0
+certifi=2021.10.8=py310h2ec42d9_1
+django=3.1.2=py_0
+django-bootstrap4=3.0.1=pyh239f2a4_0
+django-environ=0.8.1=pypi_0
+importlib-metadata=2.0.0=py_1
+krb5=1.19.2=hcd88c3b_0
+libcxx=12.0.0=h2f01273_0
+libedit=3.1.20210910=hca72f7f_0
+libffi=3.3=hb1e8313_2
+libpq=12.9=h1c9f633_1
+ncurses=6.3=hca72f7f_2
+openssl=1.1.1l=h0d85af4_0
+pip=21.2.4=py310hecd8cb5_0
+psycopg2=2.8.6=py310h0a4fc7d_1
+python=3.10.0=hdfd78df_3
+python_abi=3.10=2_cp310
+pytz=2021.3=pyhd3eb1b0_0
+readline=8.1.2=hca72f7f_1
+setuptools=58.0.4=py310hecd8cb5_0
+soupsieve=2.3.1=pyhd8ed1ab_0
+sqlite=3.37.2=h707629a_0
+sqlparse=0.4.1=py_0
+tk=8.6.11=h7bc2e8c_0
+typing_extensions=3.10.0.2=pyh06a4308_0
+tzdata=2021e=hda174b7_0
+wheel=0.37.1=pyhd3eb1b0_0
+xz=5.2.5=h1de35cc_0
+zipp=3.7.0=pyhd8ed1ab_1
+zlib=1.2.11=h4dc903c_4

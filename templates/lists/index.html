@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block page_title %}todo{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="daily">
+        <div class="box">
+            <h2 class="title">Today</h2>
+            <div class="add_area">
+                <a href="{% url 'lists:add_daily_record' %}"><i class="fas fa-plus fa-lg fa-spin"></i></a>
+            </div>          
+        </div>       
+        <form action="{% url 'lists:daily_record' %}" method="POST">
+            {% csrf_token %}
+            <div class="daily_border_area">
+                <ul id="daily-content">
+                    {% for daily in daily_list %}
+                        <li>
+                            {{ daily.content }}<button class="button_area1" name="done" type="submit" value="{{ daily.id }}"><i class="fas fa-check-square"></i></button><button class="button_area2" name="delete" type="submit" value="{{ daily.id }}"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div class="done">
+        <div id="is_achived">{{ achivement_done }}</div>
+        <h2 class="title">Today's done</h2>
+        <div class="done_border_area">
+            <ul id="done-content">
+                {% for done in done_list %}
+                    <li class="list_contents"><i class="fas fa-star"></i>{{ done.content }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="reminder">
+        <div class="box">
+            <h2 class="title">Reminder</h2>
+            <div class="add_area">
+                <a href="{% url 'lists:add_reminder_record' %}"><i class="fas fa-plus fa-lg fa-spin"></i></a>
+            </div>          
+        </div>  
+        <form action="{% url 'lists:reminder_record' %}" method="POST">
+            {% csrf_token %}
+            <div class="reminder_border_area">
+                <ul id="reminder-content">
+                    {% for reminder in reminder_list %}
+                        <li>
+                            {{ reminder.content }}<button class="button_area1" name="delete" type="submit" value="{{ reminder.id }}"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div class="objective">
+        <div class="box">
+            <h2 class="title">Objective</h2>
+            <div class="add_area">
+                <a href="{% url 'lists:add_objective_record' %}"><i class="fas fa-plus fa-lg fa-spin"></i></a>
+            </div>          
+        </div>  
+        <form action="{% url 'lists:objective_record' %}" method="POST">
+            {% csrf_token %}
+            <div class="objective_border_area">
+                <ul id="objective-content">
+                    {% for objective in objective_list %}
+                        <li>
+                            {{ objective.content }}<button class="button_area1" name="delete" type="submit" value="{{ objective.id }}"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block page_title %}add contents reminder{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="add_reminder">
+        <h1 class="title">add reminder list</h1>
+        <form action="{% url 'lists:save_reminder_record' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group text_area">
+                    <input type="text" class="form-control" style="margin-bottom: 10px;" name="content">          
+                    <button type="submit" class="btn btn-secondary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

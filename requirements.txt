@@ -1,0 +1,13 @@
+asgiref
+beautifulsoup4
+certifi==2021.10.8
+Django
+django-bootstrap4
+django-environ==0.8.1
+importlib-metadata
+psycopg2
+pytz==2021.3
+soupsieve
+sqlparse
+typing-extensions
+zipp
